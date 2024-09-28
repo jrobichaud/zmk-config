@@ -1,0 +1,11 @@
+file_format: "1"
+id: pacane
+name: Pacane
+type: shield
+url: https://github.com/pacane/zmk-config/
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+siblings:
+  - pacane_left

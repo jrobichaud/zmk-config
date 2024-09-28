@@ -1,0 +1,5 @@
+config SHIELD_PACANE_LEFT
+    def_bool $(shields_list_contains,pacane_left)
+
+config SHIELD_PACANE_RIGHT
+    def_bool $(shields_list_contains,pacane_right)
