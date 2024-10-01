@@ -8,7 +8,7 @@
 	#define default_layer 0
 	// #define lower_layer 1
 
-	// #define T_LOW &lt lower_layer LGUI
+	// #define T_LOW &lt lower_layer ESC
 
 	#define LCTL_TAB &mt LCTL BSPC
 	#define RSHIFT_QUOT &mt RSHFT SQT
