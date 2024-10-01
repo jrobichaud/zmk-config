@@ -10,20 +10,21 @@
 	#define raise_layer 2
 	#define num_layer 3
 
-        #define L_SQ_BKT RALT(LBRC)
-        #define R_SQ_BKT RALT(RBRC)
+        #define L_SQ_BKT RA(LBRC)
+        #define R_SQ_BKT RA(RBRC)
         
-        #define L_CL_BKT RALT(SQT)
-        #define R_CL_BKT RALT(BSLH)
+        #define L_CL_BKT RA(SQT)
+        #define R_CL_BKT RA(BSLH)
         
         #define L_CHEV BSLH
-        #define R_CHEV S(BSLH)
+        #define R_CHEV LS(BSLH)
 
-        #define _PLUS S(EQUAL)
-        #define _PIPE S(GRAVE)
-        #define UNDSCR S(MINUS)
-        #define MULTPL S(N8)
-        #define AMPRS S(N7)
+        #define _PLUS LS(EQUAL)
+        #define _PIPE LS(GRAVE)
+        #define UNDSCR LS(MINUS)
+        #define MULTPL LS(N8)
+        #define _AT &kp RA(N2)
+        #define AMPRS LS(N7)
 
         default_layer {
             bindings = <
@@ -50,7 +51,7 @@
     &none     &none    &none   &none	 &none     &none	&none      &none     &none     &none      &none    &none
     &kp GRAVE &kp EXCL &kp AT  &kp HASH  &kp DLLR  &kp PRCNT 	&kp CARET  &kp AMPS  &kp STAR  &kp LPAR   &kp RPAR &kp EQUAL
     &none     &none    &none   &none     &none     &none 	&none      &none     &none     &none      &none    &none 
-    &kp RALT(N2)     &none    &none   &none     &none     &none 	&none      &none     &none     &none      &none    &none  						
+    _AT     &none    &none   &none     &none     &none 	&none      &none     &none     &none      &none    &none  						
 	    	 &none  &none  &none &none &none		&none      &none     &none     &none      &none 
             >;
         };
