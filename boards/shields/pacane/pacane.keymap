@@ -23,7 +23,7 @@
         #define _PIPE S(GRAVE)
         #define UNDSCR S(MINUS)
         #define MULTPL S(N8)
-        #define _AT RALT(N2)
+        #define _AT &kp RALT(N2)
         #define AMPRS S(N7)
 
         default_layer {
