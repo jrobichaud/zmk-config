@@ -19,7 +19,7 @@
     &kp TAB	     &kp Q	&kp W	 &kp F     &kp P     &kp B		&kp J  &kp L  &kp U     &kp Y   &kp SCLN &none
     &kp LSHIFT	     &kp A	&kp R	 &kp S     &kp T     &kp G		&kp M  &kp N  &kp E     &kp I   &kp O    &kp RSHIFT_QUOT
     LCTL_TAB	     &kp Z	&kp X	 &kp C     &kp D     &kp V		&kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                       &kp LCTRL &kp LALT  T_LOW  &kp SPACE                  &kp RET	&kp RET   &kp BSPC &kp RALT
+                   &kp LGUI    &kp LCTRL &kp LALT  T_LOW  &kp SPACE                  &kp RET	&kp RET   &kp BSPC &kp RALT &kp LGUI
             >;
         };
 
