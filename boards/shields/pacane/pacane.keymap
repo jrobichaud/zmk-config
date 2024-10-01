@@ -20,6 +20,7 @@ macros {
 	#define default_layer 0
 	#define lower_layer 1
 	#define raise_layer 2
+	#define num_layer 3
 
         default_layer {
             bindings = <
@@ -27,7 +28,7 @@ macros {
     &kp TAB	     &kp Q	&kp W	 &kp F     &kp P     &kp B		&kp J  &kp L  &kp U     &kp Y   &kp SCLN &none
     &kp LSHIFT	     &kp A	&kp R	 &kp S     &kp T     &kp G		&kp M  &kp N  &kp E     &kp I   &kp O    &kp SQT 
     &kp LCTL	     &kp Z	&kp X	 &kp C     &kp D     &kp V		&kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                   &kp LGUI    &kp LCTRL &kp LALT  &lt 1 SPACE   &kp RET           &kp DEL	&lt 2 RET   &kp BSPC &kp RALT &kp LGUI
+                   &kp LGUI    &kp LCTRL &kp LALT  &lt 1 SPACE   &kp RET           &lt 3 DEL	&lt 2 RET   &kp BSPC &kp RALT &kp LGUI
             >;
         };
 
@@ -48,6 +49,16 @@ macros {
     &none     &none    &none   &none     &none     &none 	&none      &none     &none     &none      &none    &none 
     &none     &none    &none   &none     &none     &none 	&none      &none     &none     &none      &none    &none  						
 	    	 &none  &none  &none &none &none		&none      &none     &none     &none      &none 
+            >;
+        };
+
+        num_layer {
+            bindings = <
+    &none     &none    &kp N1  &kp N2 &kp N3 &none	&none      &none     &none     &none      &none    &none
+    &none     &none    &kp N7  &kp N8 &kp N9 &none	&none      &none     &none     &none      &none    &none
+    &none     &none    &kp N4  &kp N5 &kp N6 &none	&none      &none     &none     &none      &none    &none
+    &none     &none    &kp N1  &kp N2 &kp N3 &none      &none     &none      &kp COMMA &kp DOT    &none    &none					
+	    	 &none  &none  &kp N0 &kp SPC &none		&none      &none     &none     &none      &none 
             >;
         };
     };
