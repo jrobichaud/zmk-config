@@ -2,18 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-macros {
-        zed_em_kay: zed_em_kay {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z &kp M &kp K>
-                , <&macro_release &kp LSHFT>
-                ;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 	
@@ -21,6 +9,22 @@ macros {
 	#define lower_layer 1
 	#define raise_layer 2
 	#define num_layer 3
+
+        #define L_SQ_BKT RALT(LBRC)
+        #define R_SQ_BKT RALT(RBRC)
+        
+        #define L_CL_BKT RALT(SQT)
+        #define R_CL_BKT RALT(BSLH)
+        
+        #define L_CHEV BSLH
+        #define R_CHEV S(BSLH)
+
+        #define PLUS S(EQUAL)
+        #define P_PIPE S(GRAVE)
+        #define UNDSCR S(MINUS)
+        #define MULTPL S(N8)
+        #define AT RALT(N2)
+        #define AMPRS S(N7)
 
         default_layer {
             bindings = <
