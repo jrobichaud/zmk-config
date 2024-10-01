@@ -2,11 +2,24 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+macros {
+        zed_em_kay: zed_em_kay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 	
 	#define default_layer 0
 	#define lower_layer 1
+	#define raise_layer 2
 
         default_layer {
             bindings = <
@@ -14,17 +27,27 @@
     &kp TAB	     &kp Q	&kp W	 &kp F     &kp P     &kp B		&kp J  &kp L  &kp U     &kp Y   &kp SCLN &none
     &kp LSHIFT	     &kp A	&kp R	 &kp S     &kp T     &kp G		&kp M  &kp N  &kp E     &kp I   &kp O    &kp SQT 
     &kp LCTL	     &kp Z	&kp X	 &kp C     &kp D     &kp V		&kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                   &kp LGUI    &kp LCTRL &kp LALT  &lt 1 SPACE   &kp RET            &kp DEL	&kp RET   &kp BSPC &kp RALT &kp LGUI
+                   &kp LGUI    &kp LCTRL &kp LALT  &lt 1 SPACE   &kp RET           &kp DEL	&lt 2 RET   &kp BSPC &kp RALT &kp LGUI
             >;
         };
 
         lower_layer {
             bindings = <
-    &none   &none &none		&none	      &none     &none		&none  &none  &none  &none   &none    &none
-    &none   &none &none 	&kp UP        &none     &none 		&none  &none  &none  &none   &none    &none
-    &none   &none &kp LEFT      &kp DOWN      &kp RIGHT &none 		&none  &none  &none  &none   &none    &none 
-    &none   &none &none         &none         &none     &none 		&none  &none  &none  &none   &none    &none  						
-	    	 &none  &none  &none &none &none			&none  &none  &none  &none   &none 
+    &none   &none &none		&none	      &none     &none		&none  &none     &none    &none   &none     &none
+    &none   &none &none 	&kp UP        &none     &none 		&none  &none     &none    &none   &none     &none
+    &none   &none &kp LEFT      &kp DOWN      &kp RIGHT &none 		&none  &kp LEFT  &kp DOWN &kp UP  &kp RIGHT &none 
+    &none   &none &none         &none         &none     &none 		&none  &none     &none    &none   &none     &none  						
+	    	 &none  &none  &none &none &none			&none  &none     &none    &none   &none 
+            >;
+        };
+        
+	raise_layer {
+            bindings = <
+    &none     &none    &none   &none	 &none     &none	&none      &none     &none     &none      &none    &none
+    &kp GRAVE &kp EXCL &kp AT  &kp HASH  &kp DLLR  &kp PRCNT 	&kp CARET  &kp AMPS  &kp STAR  &kp LPAR   &kp RPAR &kp EQUAL
+    &none     &none    &none   &none     &none     &none 	&none      &none     &none     &none      &none    &none 
+    &none     &none    &none   &none     &none     &none 	&none      &none     &none     &none      &none    &none  						
+	    	 &none  &none  &none &none &none		&none      &none     &none     &none      &none 
             >;
         };
     };
