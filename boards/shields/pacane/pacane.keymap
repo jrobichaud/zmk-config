@@ -6,9 +6,9 @@
         compatible = "zmk,keymap";
 
 	#define default_layer 0
-	#define lower_layer 1
+	// #define lower_layer 1
 
-	#define T_LOW &lt lower_layer LGUI
+	// #define T_LOW &lt lower_layer LGUI
 
 	#define LCTL_TAB &mt LCTL BSPC
 	#define RSHIFT_QUOT &mt RSHFT SQT
@@ -19,18 +19,18 @@
     &kp TAB	     &kp Q	&kp W	 &kp F     &kp P     &kp B		&kp J  &kp L  &kp U     &kp Y   &kp SCLN &none
     &kp LSHIFT	     &kp A	&kp R	 &kp S     &kp T     &kp G		&kp M  &kp N  &kp E     &kp I   &kp O    &kp RSHIFT_QUOT
     LCTL_TAB	     &kp Z	&kp X	 &kp C     &kp D     &kp V		&kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                   &kp LGUI    &kp LCTRL &kp LALT  T_LOW  &kp SPACE            &kp RET	&kp RET   &kp BSPC &kp RALT &kp LGUI
+                   &kp LGUI    &kp LCTRL &kp LALT  &kp RET   &kp SPACE            &kp DEL	&kp RET   &kp BSPC &kp RALT &kp LGUI
             >;
         };
 
-        lower_layer {
-            bindings = <
-    &none   &none &none		&none	      &none     &none		&none  &none  &none  &none   &none    &none
-    &none   &none &none 	&kp UP        &none     &none 		&none  &none  &none  &none   &none    &none
-    &none   &none &kp LEFT      &kp DOWN      &kp RIGHT &none 		&none  &none  &none  &none   &none    &kp RSHIFT_QUOT
-    &none   &none &none         &none         &none     &none 		&none  &none  &none  &none   &none    &none  						
-    	    	 &none  &none  &none &none &none			&none  &none  &none  &none   &none 
-            >;
-        };
+    //     lower_layer {
+    //         bindings = <
+    // &none   &none &none		&none	      &none     &none		&none  &none  &none  &none   &none    &none
+    // &none   &none &none 	&kp UP        &none     &none 		&none  &none  &none  &none   &none    &none
+    // &none   &none &kp LEFT      &kp DOWN      &kp RIGHT &none 		&none  &none  &none  &none   &none    &kp RSHIFT_QUOT
+    // &none   &none &none         &none         &none     &none 		&none  &none  &none  &none   &none    &none  						
+    // 	    	 &none  &none  &none &none &none			&none  &none  &none  &none   &none 
+    //         >;
+    //     };
     };
 };
