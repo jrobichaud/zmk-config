@@ -6,11 +6,9 @@
         compatible = "zmk,keymap";
 
 	#define default_layer 0
-	#define low 1
+	#define lower_layer 1
 
-
-	#define T_LOW &lt low LGUI
-	#define T_UP &lt up BSPC
+	#define T_LOW &lt lower_layer LGUI
 
 	#define LCTL_TAB &mt LCTL BSPC
 	#define RSHIFT_QUOT &mt RSHFT SQT
@@ -25,7 +23,7 @@
             >;
         };
 
-        low {
+        lower_layer {
             bindings = <
     &none   &none &none		&none	      &none     &none		&none  &none  &none     &none   &none    &none
     &none   &none &none 	&kp up        &none     &none 		&none  &none  &none     &none   &none    &none
@@ -34,15 +32,5 @@
     	    	 &none  &none  &none &none &none			&none   &none &none &none &none 
             >;
         };
-
-	
-
-//    colemak = {
-//      MEH_ESC,  &kp Q, &kp W,  &kp F,  &kp P,  &kp B,                       &kp J,  &kp L,  &kp U,   &kp Y, &kp SCLN, XXXXXXX,
-//      &kp LSFT,  &kp A, &kp R,  &kp S,  &kp T,  &kp G,                       &kp M,  &kp N,  &kp E,   &kp I, &kp O,  RSFT_QUOT,
-//      LCTL_TAB, &kp Z,   &kp X,    &kp C,    &kp D,    &kp V,                         &kp K,    &kp H,    T_BRKT,   &kp DOT, &kp SLSH, &kp ESC,
-//                                         T_FUN,   T_LOW,   &kp SPC,     T_NUM,   T_UP,    RALT_T(&kp DEL)
-//				      };
-
     };
 };
