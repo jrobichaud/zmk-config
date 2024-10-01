@@ -5,20 +5,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-	#define default_layer 0
-	// #define lower_layer 1
-
-	// #define T_LOW &lt lower_layer ESC
-
-	#define LCTL_TAB &mt LCTL BSPC
-	#define RSHIFT_QUOT &mt RSHFT SQT
-
         default_layer {
             bindings = <
     &kp ESC   	     &kp N1	&kp N2	 &kp N3    &kp N4    &kp N5		&kp N6 &kp N7 &kp N8    &kp N9  &kp N0   &none
     &kp TAB	     &kp Q	&kp W	 &kp F     &kp P     &kp B		&kp J  &kp L  &kp U     &kp Y   &kp SCLN &none
-    &kp LSHIFT	     &kp A	&kp R	 &kp S     &kp T     &kp G		&kp M  &kp N  &kp E     &kp I   &kp O    &kp RSHIFT_QUOT
-    LCTL_TAB	     &kp Z	&kp X	 &kp C     &kp D     &kp V		&kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp ESC
+    &kp LSHIFT	     &kp A	&kp R	 &kp S     &kp T     &kp G		&kp M  &kp N  &kp E     &kp I   &kp O    &kp SQT 
+    &kp LCTL	     &kp Z	&kp X	 &kp C     &kp D     &kp V		&kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp ESC
                    &kp LGUI    &kp LCTRL &kp LALT  &kp RET   &kp SPACE            &kp DEL	&kp RET   &kp BSPC &kp RALT &kp LGUI
             >;
         };
