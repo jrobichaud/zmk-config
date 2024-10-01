@@ -19,11 +19,11 @@
         #define L_CHEV BSLH
         #define R_CHEV S(BSLH)
 
-        #define PLUS S(EQUAL)
-        #define P_PIPE S(GRAVE)
+        #define _PLUS S(EQUAL)
+        #define _PIPE S(GRAVE)
         #define UNDSCR S(MINUS)
         #define MULTPL S(N8)
-        #define AT RALT(N2)
+        #define _AT RALT(N2)
         #define AMPRS S(N7)
 
         default_layer {
