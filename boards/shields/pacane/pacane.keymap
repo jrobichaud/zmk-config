@@ -23,7 +23,6 @@
         #define _PIPE S(GRAVE)
         #define UNDSCR S(MINUS)
         #define MULTPL S(N8)
-        #define AAAT &kp RALT(N2)
         #define AMPRS S(N7)
 
         default_layer {
@@ -51,7 +50,7 @@
     &none     &none    &none   &none	 &none     &none	&none      &none     &none     &none      &none    &none
     &kp GRAVE &kp EXCL &kp AT  &kp HASH  &kp DLLR  &kp PRCNT 	&kp CARET  &kp AMPS  &kp STAR  &kp LPAR   &kp RPAR &kp EQUAL
     &none     &none    &none   &none     &none     &none 	&none      &none     &none     &none      &none    &none 
-    AAAT     &none    &none   &none     &none     &none 	&none      &none     &none     &none      &none    &none  						
+    &kp RALT(N2)     &none    &none   &none     &none     &none 	&none      &none     &none     &none      &none    &none  						
 	    	 &none  &none  &none &none &none		&none      &none     &none     &none      &none 
             >;
         };
