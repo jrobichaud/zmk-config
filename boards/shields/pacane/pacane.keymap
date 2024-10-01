@@ -5,8 +5,8 @@
     keymap {
         compatible = "zmk,keymap";
 	
-	#define default_layer 0;
-	#define lower_layer 1;
+	#define default_layer 0
+	#define lower_layer 1
 
         default_layer {
             bindings = <
