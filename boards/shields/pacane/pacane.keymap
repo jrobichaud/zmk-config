@@ -51,7 +51,7 @@
     &none     &none    &none   &none	 &none     &none	&none      &none     &none     &none      &none    &none
     &kp GRAVE &kp EXCL &kp AT  &kp HASH  &kp DLLR  &kp PRCNT 	&kp CARET  &kp AMPS  &kp STAR  &kp LPAR   &kp RPAR &kp EQUAL
     &none     &none    &none   &none     &none     &none 	&none      &none     &none     &none      &none    &none 
-    &none     &none    &none   &none     &none     &none 	&none      &none     &none     &none      &none    &none  						
+    _AT     &none    &none   &none     &none     &none 	&none      &none     &none     &none      &none    &none  						
 	    	 &none  &none  &none &none &none		&none      &none     &none     &none      &none 
             >;
         };
