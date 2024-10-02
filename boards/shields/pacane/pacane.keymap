@@ -27,13 +27,15 @@
         #define MULTPL &kp LS(N8)
         #define _AT &kp RA(N2)
         #define AMPRS &kp LS(N7)
+        #define TREMA &kp LS(RBRC)
+
 
         default_layer {
             bindings = <
-    &kp ESC   	     &kp N1	&kp N2	 &kp N3    &kp N4    &kp N5		&kp N6 &kp N7 &kp N8    &kp N9  &kp N0   &none
-    &kp TAB	     &kp Q	&kp W	 &kp F     &kp P     &kp B		&kp J  &kp L  &kp U     &kp Y   &kp SCLN &none
-    &kp LSHIFT	     &kp A	&kp R	 &kp S     &kp T     &kp G		&kp M  &kp N  &kp E     &kp I   &kp O    &kp SQT 
-    &kp LCTL	     &kp Z	&kp X	 &kp C     &kp D     &kp V		&kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp ESC
+    &kp ESC   	     &kp N1	&kp N2	 &kp N3    &kp N4    &kp N5		&kp N6   &kp N7 &kp N8    &kp N9  &kp N0   &none
+    &kp TAB	     &kp Q	&kp W	 &kp F     &kp P     &kp B		&kp J    &kp L  &kp U     &kp Y   &kp SCLN &none
+    &kp LSHIFT	     &kp A	&kp R	 &kp S     &kp T     &lt 5 G		&lt 5 M  &kp N  &kp E     &kp I   &kp O    &kp SQT 
+    &kp LCTL	     &kp Z	&kp X	 &kp C     &kp D     &kp V		&kp K    &kp H  &kp COMMA &kp DOT &kp FSLH &kp ESC
                    &kp LGUI    &kp LCTRL &kp LALT  &lt 1 SPACE &lt 4 RET           &lt 3 DEL	&lt 2 RET   &kp BSPC &kp RALT &kp LGUI
             >;
         };
@@ -74,7 +76,17 @@
     &none &none  &none &none &none  &none            &none &kp F7   &kp F8  &kp F9  &none &none
     &none &none  &none &none &none  &none            &none &kp F4   &kp F5  &kp F6  &none &none
     &none &none  &none &none &none  &none            &none &kp F1   &kp F2  &kp F3  &none &none					
-	  &none  &none  &none &none &none &none		  &none  &none  &none  &none &none 
+	  &none  &none  &none &none &none 		 &none &none  &none  &none  &none &none 
+            >;
+        };
+        
+        fr_layer {
+            bindings = <
+    &none &none    &none &none    &none  &none            &none &none &none &none &none    &none
+    &none &none    &none &none    &none  &none            &none &none &none &none &none    &none
+    &none &kp LBRC &none &none    &none  &none            &none &none &none TREMA &kp LBRC &none
+    &none &none    &none &kp RBRC &none  &none            &none &none &none &none &none    &none					
+	  &none    &none &none    &none &none 		     &none &none  &none  &none  &none &none 
             >;
         };
     };
