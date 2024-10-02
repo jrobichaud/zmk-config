@@ -116,8 +116,8 @@ ZMK_HOLD_TAP(hmr,
             bindings = <
     &none &none    &none &none    &none  &none            &none &none &none &none &none    &none
     &none &none    &none &none    &none  &none            &none &none &none &none &none    &none
-    &none &kp LBRC &none &none    &none  &none            &none &none &none TREMA &kp LBRC &none
-    &none &none    &none &kp RBRC &none  &none            &none &none &none &none &none    &none					
+    &none &kp LBKT &none &none    &none  &none            &none &none &none TREMA &kp LBRC &none
+    &none &none    &none &kp RBKT &none  &none            &none &none &none &none &none    &none					
 	  &none    &none &none    &none &none 		     &none &none  &none  &none  &none &none 
             >;
         };
