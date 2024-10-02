@@ -19,54 +19,11 @@
     hml: homerow_mods_left {
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MODS_LEFT";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-
-      flavor = "balanced";
-      tapping-term-ms = <280>;
-      quick-tap-ms = <175>;        // repeat on tap-into-hold
-      // global-quick-tap-ms = <150>;         // requires PR #1387
-      global-quick-tap;
-      hold-trigger-key-positions = <KEYS_R KEYS_T>;
-      hold-trigger-on-release;       // requires PR #1423
     };
 
     hmr: homerow_mods_right {
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MODS_RIGHT";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-
-      flavor = "balanced";
-      tapping-term-ms = <280>;
-      // global-quick-tap-ms = <150>;         // requires PR #1387
-      quick_tap_ms = <175>;
-      global-quick-tap;
-      hold-trigger-key-positions = <KEYS_L KEYS_T>;
-      hold-trigger-on-release;       // requires PR #1423
     };
-
-
-    /*
-     * Non-Positional Homerow Mods
-     * Used for &mm_grescm_gui behavior on left hand.
-     *
-     * Usage: &hm LSHFT T
-     * Tap: T
-     * Tap-Tap-Hold: Repeat T
-     * Hold: LSHIFT
-     */
-    tm: thumb_mods {
-      compatible = "zmk,behavior-hold-tap";
-      label = "THUMB_MODS";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-
-      flavor = "balanced";
-      tapping-term-ms = <200>;
-      quick_tap_ms = <175>;
-      retro-tap; // use tap when key is used without another key
-    };
-
   };
 };
