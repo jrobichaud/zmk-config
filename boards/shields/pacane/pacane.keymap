@@ -2,43 +2,39 @@
 #include <dt-bindings/zmk/keys.h>
 #include "zmk-helpers/helper.h"
 
-/ {
-    keymap {
-        compatible = "zmk,keymap";
-	
-	#define default_layer 0
-	#define lower_layer 1
-	#define raise_layer 2
-	#define num_layer 3
-	#define fun_layer 4
-	#define fr_layer 5
+#define default_layer 0
+#define lower_layer 1
+#define raise_layer 2
+#define num_layer 3
+#define fun_layer 4
+#define fr_layer 5
 
-        #define L_SQ_BKT &kp RA(LBRC)
-        #define R_SQ_BKT &kp RA(RBRC)
-        
-        #define L_CL_BKT &kp RA(SQT)
-        #define R_CL_BKT &kp RA(BSLH)
-        
-        #define L_CHEV &kp BSLH
-        #define R_CHEV &kp LS(BSLH)
+#define L_SQ_BKT &kp RA(LBRC)
+#define R_SQ_BKT &kp RA(RBRC)
 
-        #define _PLUS &kp LS(EQUAL)
-        #define _PIPE &kp LS(GRAVE)
-        #define UNDSCR &kp LS(MINUS)
-        #define MULTPL &kp LS(N8)
-        #define _AT &kp RA(N2)
-        #define AMPRS &kp LS(N7)
-        #define TREMA &kp LS(RBRC)
-        
-        // 0   1  2  3  4  5   6  7  8  9 10 11
-        // 12 13 14 15 16 17  18 19 20 21 22 23
-        // 24 25 26 27 28 29  30 31 32 33 34 35
-        // 35 36 37 38 39 40  41 42 43 44 45 46
-        //    47 48 49 50 51  52 53 54 55 56  
+#define L_CL_BKT &kp RA(SQT)
+#define R_CL_BKT &kp RA(BSLH)
 
-        #define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 35 36 37 38 39 40 
-        #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 41 42 43 44 45 46
-        #define THUMBS 47 48 49 50 51 52 53 54 55 56
+#define L_CHEV &kp BSLH
+#define R_CHEV &kp LS(BSLH)
+
+#define _PLUS &kp LS(EQUAL)
+#define _PIPE &kp LS(GRAVE)
+#define UNDSCR &kp LS(MINUS)
+#define MULTPL &kp LS(N8)
+#define _AT &kp RA(N2)
+#define AMPRS &kp LS(N7)
+#define TREMA &kp LS(RBRC)
+
+// 0   1  2  3  4  5   6  7  8  9 10 11
+// 12 13 14 15 16 17  18 19 20 21 22 23
+// 24 25 26 27 28 29  30 31 32 33 34 35
+// 35 36 37 38 39 40  41 42 43 44 45 46
+//    47 48 49 50 51  52 53 54 55 56  
+
+#define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 35 36 37 38 39 40 
+#define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 41 42 43 44 45 46
+#define THUMBS 47 48 49 50 51 52 53 54 55 56
 
 /* left-hand HRMs */
 ZMK_HOLD_TAP(hml,
@@ -61,6 +57,10 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;             // delay positional check until key-release
 )
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+	
 
         default_layer {
             bindings = <
