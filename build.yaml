@@ -22,3 +22,5 @@ include:
     shield: pacane_left
   - board: nice_nano_v2
     shield: pacane_right
+  - board: nice_nano_v2
+    shield: settings_reset
