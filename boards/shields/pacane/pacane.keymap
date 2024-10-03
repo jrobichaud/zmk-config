@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include "zmk-helpers/helper.h"
+#include <dt-bindings/zmk/bt.h>
 
 #define default_layer 0
 #define lower_layer 1
@@ -10,6 +11,7 @@
 #define fr_layer 5
 #define media_layer 6
 #define win_layer 7
+#define kb_layer 8
 
 #define L_SQ_BKT &kp RA(LBRC)
 #define R_SQ_BKT &kp RA(RBRC)
@@ -100,7 +102,7 @@ ZMK_HOLD_TAP(hmr,
     &none   &none &none		&kp UP        &none     &none		&none  &none     &none    &none   &none     &none
     &mo 7   &none &kp LEFT      &kp DOWN      &kp RIGHT &none		&none  &kp LEFT  &kp DOWN &kp UP  &kp RIGHT &none
     &none   &none &none         &none         &none     &none		&none  &none     &none    &none   &none     &none
-		 &none  &none  &none &none &none			&none  &none     &none    &none   &none
+		 &none  &none  &none &none &none			&none  &mo 8     &none    &none   &none
 	    >;
 	};
 
@@ -161,6 +163,16 @@ ZMK_HOLD_TAP(hmr,
     &none     &none    &none   &none    &none   &none            &kp WSL &kp WSD &kp WSU &kp WSR &none    &none
     &none     &none    &none   &none    &none   &none            &none   &none   &none   &none   &none    &none
 	  &none    &none &kp LGUI   &none &kp L_CYCLE                   &kp W_SWAP  &none  &none  &none  &none &none
+	    >;
+	};
+
+	kb_layer {
+	    bindings = <
+    &bootloader &sys_reset  &none &none &none  &none            &none &none &none &none &sys_reset &bootloader  
+    &bt BT_CLR  &BT_CLR_ALL &none &none &none  &none            &none &none &none &none &none      &none
+    &bt BT_PRV  &bt BT_NXT  &none &none &none  &none            &none &none &none &none &none      &none
+    &bt DISC    &none       &none &none &none  &none            &none &none &none &none &none      &none
+	  &none  &none  &none &none &none		 &none &none  &none  &none  &none &none
 	    >;
 	};
     };
