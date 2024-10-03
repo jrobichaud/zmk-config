@@ -8,6 +8,8 @@
 #define num_layer 3
 #define fun_layer 4
 #define fr_layer 5
+#define media_layer 6
+#define win_layer 7
 
 #define L_SQ_BKT &kp RA(LBRC)
 #define R_SQ_BKT &kp RA(RBRC)
@@ -26,13 +28,33 @@
 #define AMPRS &kp LS(N7)
 #define TREMA &kp LS(RBRC)
 
+#define WS1 LS(LA(KC_1))
+#define WS2 LS(LA(KC_2))
+#define WS3 LS(LA(KC_3))
+#define WS4 LS(LA(KC_4))
+#define WS5 LS(LA(KC_5))
+#define WS6 LS(LA(KC_6))
+#define WS7 LS(LA(KC_7))
+#define WS8 LS(LA(KC_8))
+#define WS9 LS(LA(KC_9))
+#define WS0 LS(LA(KC_0))
+
+#define WSL LS(LA(KC_H))
+#define WSD LS(LA(KC_J))
+#define WSU LS(LA(KC_K))
+#define WSR LS(LA(KC_L))
+
+#define T_FLOAT LS(LA(KC_T))
+#define W_SWAP LS(LA(KC_ENT))
+#define L_CYCLE LS(LA(KC_SPC))
+
 // 0   1  2  3  4  5   6  7  8  9 10 11
 // 12 13 14 15 16 17  18 19 20 21 22 23
 // 24 25 26 27 28 29  30 31 32 33 34 35
 // 35 36 37 38 39 40  41 42 43 44 45 46
-//    47 48 49 50 51  52 53 54 55 56  
+//    47 48 49 50 51  52 53 54 55 56
 
-#define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 35 36 37 38 39 40 
+#define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 35 36 37 38 39 40
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 41 42 43 44 45 46
 #define THUMBS 47 48 49 50 51 52 53 54 55 56
 
@@ -59,67 +81,87 @@ ZMK_HOLD_TAP(hmr,
 )
 / {
     keymap {
-        compatible = "zmk,keymap";
-	
+	compatible = "zmk,keymap";
 
-        default_layer {
-            bindings = <
-    &kp ESC   	     &kp N1	   &kp N2	  &kp N3         &kp N4         &kp N5		&kp N6      &kp N7        &kp N8          &kp N9        &kp N0        &kp N4
+
+	default_layer {
+	    bindings = <
+    &kp ESC	     &kp N1	   &kp N2	  &kp N3         &kp N4         &kp N5		&kp N6      &kp N7        &kp N8          &kp N9        &kp N0        &kp N4
     &kp TAB	     &kp Q	   &kp W	  &kp F          &kp P          &kp B		&kp J       &kp L         &kp U           &kp Y         &kp SCLN      &none
-    &kp LSHIFT	     &hml LCTRL A  &hml RALT R	  &hml LGUI S    &hml LSHFT T   &lt 5 G		&lt 5 M     &hmr LSHFT N  &hmr LGUI E     &hmr LALT I   &hmr LCTRL O  &kp SQT 
+    &kp LSHIFT	     &hml LCTRL A  &hml RALT R	  &hml LGUI S    &hml LSHFT T   &lt 5 G		&lt 5 M     &hmr LSHFT N  &hmr LGUI E     &hmr LALT I   &hmr LCTRL O  &kp SQT
     &kp TAB	     &kp Z	   &kp X	  &kp C          &kp D          &kp V		&kp K       &kp H         &kp COMMA &kp DOT &kp FSLH &kp ESC
-                   &kp LGUI    &kp LCTRL &kp LALT  &lt 1 SPACE &lt 4 RET                             &lt 3 DEL	&lt 2 RET   &kp BSPC &kp RALT &kp LGUI
-            >;
-        };
+		   &kp LGUI    &kp LCTRL &mo 6  &lt 1 SPACE &lt 4 RET                             &lt 3 DEL	&lt 2 RET   &kp BSPC &kp RALT &kp LGUI
+	    >;
+	};
 
-        lower_layer {
-            bindings = <
+	lower_layer {
+	    bindings = <
     &none   &none &none		&none	      &none     &none		&none  &none     &none    &none   &none     &none
-    &none   &none &none 	&kp UP        &none     &none 		&none  &none     &none    &none   &none     &none
-    &none   &none &kp LEFT      &kp DOWN      &kp RIGHT &none 		&none  &kp LEFT  &kp DOWN &kp UP  &kp RIGHT &none 
-    &none   &none &none         &none         &none     &none 		&none  &none     &none    &none   &none     &none  						
-	    	 &none  &none  &none &none &none			&none  &none     &none    &none   &none 
-            >;
-        };
-        
+    &none   &none &none		&kp UP        &none     &none		&none  &none     &none    &none   &none     &none
+    &mo 7   &none &kp LEFT      &kp DOWN      &kp RIGHT &none		&none  &kp LEFT  &kp DOWN &kp UP  &kp RIGHT &none
+    &none   &none &none         &none         &none     &none		&none  &none     &none    &none   &none     &none
+		 &none  &none  &none &none &none			&none  &none     &none    &none   &none
+	    >;
+	};
+
 	raise_layer {
-            bindings = <
+	    bindings = <
     &none     &none    &none       &none      &none     &none	      &none           &none     &none     &none      &none    &none
     &kp GRAVE &kp EXCL &kp AT      &kp HASH   &kp DLLR  &kp PRCNT     &kp CARET       &kp AMPS  &kp STAR  &kp LPAR   &kp RPAR &kp EQUAL
-    &none     _PIPE    L_CHEV      L_SQ_BKT   L_CL_BKT  &kp LPAR      &kp RPAR        R_CL_BKT  R_SQ_BKT  R_CHEV     &kp HOME &kp PG_UP  
-    _AT       UNDSCR   &kp EQUAL   &kp MINUS  _PLUS     MULTPL 	      &kp PAUSE_BREAK &kp F12   &kp INS   &kp DEL    &kp END  &kp PG_DN
-	    	 &none  &none  &none &none &none		&none      &none      &none     &none      &none 
-            >;
-        };
+    &none     _PIPE    L_CHEV      L_SQ_BKT   L_CL_BKT  &kp LPAR      &kp RPAR        R_CL_BKT  R_SQ_BKT  R_CHEV     &kp HOME &kp PG_UP
+    _AT       UNDSCR   &kp EQUAL   &kp MINUS  _PLUS     MULTPL	      &kp PAUSE_BREAK &kp F12   &kp INS   &kp DEL    &kp END  &kp PG_DN
+		 &none  &none  &none &none &none		&none      &none      &none     &none      &none
+	    >;
+	};
 
-        num_layer {
-            bindings = <
+	num_layer {
+	    bindings = <
     &none     &none      &kp N1  &kp N2 &kp N3 &none	    &none      &none     &none     &none      &none    &none
     &none     &kp LS(N3) &kp N7  &kp N8 &kp N9 &kp PLUS	    &none      &none     &none     &none      &none    &none
     &none     &kp LS(N8) &kp N4  &kp N5 &kp N6 &kp MINUS    &none      &none     &none     &none      &none    &none
-    &none     &kp LS(N5) &kp N1  &kp N2 &kp N3 &kp EQUAL    &none      &none     &kp COMMA &kp DOT    &none    &none					
-	    	 &none  &none  &kp N0 &kp SPC &none		&kp DEL      &kp RET   &none     &none      &none 
-            >;
-        };
-        
-        fun_layer {
-            bindings = <
+    &none     &kp LS(N5) &kp N1  &kp N2 &kp N3 &kp EQUAL    &none      &none     &kp COMMA &kp DOT    &none    &none
+		 &none  &none  &kp N0 &kp SPC &none		&kp DEL      &kp RET   &none     &none      &none
+	    >;
+	};
+
+	fun_layer {
+	    bindings = <
     &none &none  &none &none &none  &none            &none &kp F10  &kp F11 &kp F12 &none &none
     &none &none  &none &none &none  &none            &none &kp F7   &kp F8  &kp F9  &none &none
     &none &none  &none &none &none  &none            &none &kp F4   &kp F5  &kp F6  &none &none
-    &none &none  &none &none &none  &none            &none &kp F1   &kp F2  &kp F3  &none &none					
-	  &none  &none  &none &none &none 		 &none &none  &none  &none  &none &none 
-            >;
-        };
-        
-        fr_layer {
-            bindings = <
+    &none &none  &none &none &none  &none            &none &kp F1   &kp F2  &kp F3  &none &none
+	  &none  &none  &none &none &none		 &none &none  &none  &none  &none &none
+	    >;
+	};
+
+	fr_layer {
+	    bindings = <
     &none &none    &none &none    &none  &none            &none &none &none &none &none    &none
     &none &none    &none &none    &none  &none            &none &none &none &none &none    &none
     &none &kp LBKT &none &none    &none  &none            &none &none &none TREMA &kp LBRC &none
-    &none &none    &none &kp RBKT &none  &none            &none &none &none &none &none    &none					
-	  &none    &none &none    &none &none 		     &none &none  &none  &none  &none &none 
-            >;
-        };
+    &none &none    &none &kp RBKT &none  &none            &none &none &none &none &none    &none
+	  &none    &none &none    &none &none		     &none &none  &none  &none  &none &none
+	    >;
+	};
+
+	media_layer {
+	    bindings = <
+    &none     &none    &none &none    &none  &none            &none &none &none &none &none    &kp PSCRN
+    &none     &none    &none &none    &none  &kp C_PREV       &none &none &none &none &none    &none
+    &kp LSHFT &none    &none &none    &none  &kp C_PP         &none &none &none &none &none    &none
+    &none     &none    &none &none    &none  &kp C_FF         &none &none &none &none &none    &none
+	  &none    &none &none    &none &none		     &none &none  &none  &none  &none &none
+	    >;
+	};
+
+	win_layer {
+	    bindings = <
+    &none     &none    &none   &none    &none   &none            &none   &none   &none   &none   &none    &none
+    &none     &kp WS1  &kp WS2 &kp WS3  &kp WS4 &kp WS5          &kp WS6 &kp WS7 &kp WS8 &kp WS9 &kp WS0  &none
+    &none     &none    &none   &none    &none   &none            &kp WSL &kp WSD &kp WSU &kp WSR &none    &none
+    &none     &none    &none   &none    &none   &none            &none   &none   &none   &none   &none    &none
+	  &none    &none &kp LGUI   &none &L_CYCLE                   &kp W_SWAP  &none  &none  &none  &none &none
+	    >;
+	};
     };
 };
