@@ -28,25 +28,25 @@
 #define AMPRS &kp LS(N7)
 #define TREMA &kp LS(RBRC)
 
-#define WS1 LS(LA(KC_1))
-#define WS2 LS(LA(KC_2))
-#define WS3 LS(LA(KC_3))
-#define WS4 LS(LA(KC_4))
-#define WS5 LS(LA(KC_5))
-#define WS6 LS(LA(KC_6))
-#define WS7 LS(LA(KC_7))
-#define WS8 LS(LA(KC_8))
-#define WS9 LS(LA(KC_9))
-#define WS0 LS(LA(KC_0))
+#define WS1 LS(LA(N1))
+#define WS2 LS(LA(N2))
+#define WS3 LS(LA(N3))
+#define WS4 LS(LA(N4))
+#define WS5 LS(LA(N5))
+#define WS6 LS(LA(N6))
+#define WS7 LS(LA(N7))
+#define WS8 LS(LA(N8))
+#define WS9 LS(LA(N9))
+#define WS0 LS(LA(N0))
 
-#define WSL LS(LA(KC_H))
-#define WSD LS(LA(KC_J))
-#define WSU LS(LA(KC_K))
-#define WSR LS(LA(KC_L))
+#define WSL LS(LA(H))
+#define WSD LS(LA(J))
+#define WSU LS(LA(K))
+#define WSR LS(LA(L))
 
-#define T_FLOAT LS(LA(KC_T))
-#define W_SWAP LS(LA(KC_ENT))
-#define L_CYCLE LS(LA(KC_SPC))
+#define T_FLOAT LS(LA(T))
+#define W_SWAP LS(LA(RET))
+#define L_CYCLE LS(LA(SPACE))
 
 // 0   1  2  3  4  5   6  7  8  9 10 11
 // 12 13 14 15 16 17  18 19 20 21 22 23
@@ -160,7 +160,7 @@ ZMK_HOLD_TAP(hmr,
     &none     &kp WS1  &kp WS2 &kp WS3  &kp WS4 &kp WS5          &kp WS6 &kp WS7 &kp WS8 &kp WS9 &kp WS0  &none
     &none     &none    &none   &none    &none   &none            &kp WSL &kp WSD &kp WSU &kp WSR &none    &none
     &none     &none    &none   &none    &none   &none            &none   &none   &none   &none   &none    &none
-	  &none    &none &kp LGUI   &none &L_CYCLE                   &kp W_SWAP  &none  &none  &none  &none &none
+	  &none    &none &kp LGUI   &none &kp L_CYCLE                   &kp W_SWAP  &none  &none  &none  &none &none
 	    >;
 	};
     };
