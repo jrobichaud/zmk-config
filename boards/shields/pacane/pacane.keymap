@@ -12,6 +12,7 @@
 #define media_layer 6
 #define win_layer 7
 #define kb_layer 8
+#define brackets_layer 8
 
 #define L_SQ_BKT &kp RA(LBRC)
 #define R_SQ_BKT &kp RA(RBRC)
@@ -88,81 +89,81 @@ ZMK_HOLD_TAP(hmr,
 
 	default_layer {
 	    bindings = <
-    &kp ESC	     &kp N1	   &kp N2	  &kp N3         &kp N4         &kp N5		&kp N6      &kp N7        &kp N8          &kp N9        &kp N0        &kp N4
-    &kp TAB	     &kp Q	   &kp W	  &kp F          &kp P          &kp B		&kp J       &kp L         &kp U           &kp Y         &kp SCLN      &none
-    &kp LSHIFT	     &hml LCTRL A  &hml RALT R	  &hml LGUI S    &hml LSHFT T   &lt 5 G		&lt 5 M     &hmr LSHFT N  &hmr LGUI E     &hmr LALT I   &hmr LCTRL O  &kp SQT
-    &kp TAB	     &kp Z	   &kp X	  &kp C          &kp D          &kp V		&kp K       &kp H         &kp COMMA &kp DOT &kp FSLH &kp ESC
-		   &kp LGUI  &mo 6 &lt 1 ESC &kp SPACE &lt 4 RET                             &lt 3 DEL	&lt 2 RET   &kp BSPC &kp RALT &kp LGUI
+    &kp ESC	  &kp N1       &kp N2	   &kp N3      &kp N4       &kp N5	&kp N6  &kp N7       &kp N8       &kp N9      &kp N0       &kp N4
+    &kp TAB	  &kp Q	       &kp W	   &kp F       &kp P        &kp B	&kp J   &kp L        &kp U        &kp Y       &kp SCLN     &none
+    &kp LSHIFT	  &hml LCTRL A &hml RALT R &hml LGUI S &hml LSHFT T &lt 5 G	&lt 5 M &hmr LSHFT N &hmr LGUI E  &hmr LALT I &hmr LCTRL O &kp SQT
+    &mt LCTRL TAB &kp Z	       &kp X	   &kp C       &kp D        &kp V	&kp K   &kp H        &lt 8 COMMA  &kp DOT     &kp FSLH     &kp ESC
+		   &kp LGUI  &mo 6 &lt 1 ESC &lt 1 SPACE &lt 4 RET                      &lt 3 DEL &lt 2 RET &kp BSPC &kp RALT &kp LGUI
 	    >;
 	};
 
 	lower_layer {
 	    bindings = <
-    &none   &none &none		&none	      &none     &none		&none  &none     &none    &none   &none     &none
-    &none   &none &none		&kp UP        &none     &none		&none  &none     &none    &none   &none     &none
-    &mo 7   &none &kp LEFT      &kp DOWN      &kp RIGHT &none		&none  &kp LEFT  &kp DOWN &kp UP  &kp RIGHT &none
-    &none   &none &none         &none         &none     &none		&none  &none     &none    &none   &none     &none
-		 &none  &none  &none &none &none			&none  &kp LA(RET)     &none    &none   &mo 8
+    &none &none &none	 &none	   &none     &none	&none  &none    &none    &none  &none     &none
+    &none &none &none	 &kp UP    &none     &none	&none  &none    &none    &none  &none     &none
+    &mo 7 &none &kp LEFT &kp DOWN  &kp RIGHT &none	&none  &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
+    &none &none &none    &none     &none     &none	&none  &none    &none    &none  &none     &none
+		 &none  &none  &none &none &none		&kp DEL &kp LA(RET) &none &none &mo 8
 	    >;
 	};
 
 	raise_layer {
 	    bindings = <
-    &none     &none    &none       &none      &none     &none	      &none           &none     &none     &none      &none    &none
-    &kp GRAVE &kp EXCL &kp AT      &kp HASH   &kp DLLR  &kp PRCNT     &kp CARET       &kp AMPS  &kp STAR  &kp LPAR   &kp RPAR &kp EQUAL
-    &none     _PIPE    L_CHEV      L_SQ_BKT   L_CL_BKT  &kp LPAR      &kp RPAR        R_CL_BKT  R_SQ_BKT  R_CHEV     &kp HOME &kp PG_UP
-    _AT       UNDSCR   &kp EQUAL   &kp MINUS  _PLUS     MULTPL	      &kp PAUSE_BREAK &kp F12   &kp INS   &kp DEL    &kp END  &kp PG_DN
-		 &none  &none  &none &none &none		&none      &none      &none     &none      &none
+    &none     &none    &none     &none     &none    &none	  &none           &none    &none    &none    &none    &none
+    &kp GRAVE &kp EXCL &kp AT    &kp HASH  &kp DLLR &kp PRCNT     &kp CARET       &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp EQUAL
+    &none     _PIPE    L_CHEV    L_SQ_BKT  L_CL_BKT &kp LPAR      &kp RPAR        R_CL_BKT R_SQ_BKT R_CHEV   &kp HOME &kp PG_UP
+    _AT       UNDSCR   &kp EQUAL &kp MINUS _PLUS    MULTPL	  &kp PAUSE_BREAK &kp F12  &kp INS  &kp DEL  &kp END  &kp PG_DN
+		 &none  &none  &none &kp SPACE &none		          &none      &none      &none     &none      &none
 	    >;
 	};
 
 	num_layer {
 	    bindings = <
-    &none     &none      &kp N1  &kp N2 &kp N3 &none	    &none      &none     &none     &none      &none    &none
-    &none     &kp LS(N3) &kp N7  &kp N8 &kp N9 &kp PLUS	    &none      &none     &none     &none      &none    &none
-    &none     &kp LS(N8) &kp N4  &kp N5 &kp N6 &kp MINUS    &none      &none     &none     &none      &none    &none
-    &none     &kp LS(N5) &kp N1  &kp N2 &kp N3 &kp EQUAL    &none      &none     &kp COMMA &kp DOT    &none    &none
-		 &none  &none  &kp N0 &kp SPC &none		&kp DEL      &kp RET   &none     &none      &none
+    &none &none      &kp N1  &kp N2 &kp N3 &none	&none &none &none     &none   &none &none
+    &none &kp LS(N3) &kp N7  &kp N8 &kp N9 &kp PLUS	&none &none &none     &none   &none &none
+    &none &kp LS(N8) &kp N4  &kp N5 &kp N6 &kp MINUS    &none &none &none     &none   &none &none
+    &none &kp LS(N5) &kp N1  &kp N2 &kp N3 &kp EQUAL    &none &none &kp COMMA &kp DOT &none &none
+		 &none &none &kp N0 &kp SPC &none	   &kp DEL &kp RET &none &none &none
 	    >;
 	};
 
 	fun_layer {
 	    bindings = <
-    &none &none  &none &none &none  &none            &none &kp F10  &kp F11 &kp F12 &none &none
-    &none &none  &none &none &none  &none            &none &kp F7   &kp F8  &kp F9  &none &none
-    &none &none  &none &none &none  &none            &none &kp F4   &kp F5  &kp F6  &none &none
-    &none &none  &none &none &none  &none            &none &kp F1   &kp F2  &kp F3  &none &none
+    &none &none  &none &none &none &none            &none &kp F10 &kp F11 &kp F12 &none &none
+    &none &none  &none &none &none &none            &none &kp F7  &kp F8  &kp F9  &none &none
+    &none &none  &none &none &none &none            &none &kp F4  &kp F5  &kp F6  &none &none
+    &none &none  &none &none &none &none            &none &kp F1  &kp F2  &kp F3  &none &none
 	  &none  &none  &none &none &none		 &none &none  &none  &none  &none &none
 	    >;
 	};
 
 	fr_layer {
 	    bindings = <
-    &none &none    &none &none    &none  &none            &none &none &none &none &none    &none
-    &none &none    &none &none    &none  &none            &none &none &none &none &none    &none
-    &none &kp LBKT &none &none    &none  &none            &none &none &none TREMA &kp LBRC &none
-    &none &none    &none &kp RBKT &none  &none            &none &none &none &none &none    &none
+    &none &none    &none &none    &none &none            &none &none &none &none &none    &none
+    &none &none    &none &none    &none &none            &none &none &none &none &none    &none
+    &none &kp LBKT &none &none    &none &none            &none &none &none TREMA &kp LBRC &none
+    &none &none    &none &kp RBKT &none &none            &none &none &none &none &none    &none
 	  &none    &none &none    &none &none		     &none &none  &none  &none  &none &none
 	    >;
 	};
 
 	media_layer {
 	    bindings = <
-    &none     &none    &none &none    &none  &none            &none &none &none &none &none    &kp PSCRN
-    &none     &none    &none &none    &none  &kp C_PREV       &none &none &none &none &none    &none
-    &kp LSHFT &none    &none &none    &none  &kp C_PP         &none &none &none &none &none    &none
-    &none     &none    &none &none    &none  &kp C_FF         &none &none &none &none &none    &none
+    &none     &none &none &none &none &none            &none &none &none &none &none &kp PSCRN
+    &none     &none &none &none &none &kp C_PREV       &none &none &none &none &none &none
+    &kp LSHFT &none &none &none &none &kp C_PP         &none &none &none &none &none &none
+    &none     &none &none &none &none &kp C_FF         &none &none &none &none &none &none
 	  &none    &none &none    &none &none		     &none &none  &none  &none  &none &none
 	    >;
 	};
 
 	win_layer {
 	    bindings = <
-    &none     &none    &none   &none    &none   &none            &none   &none   &none   &none   &none    &none
-    &none     &kp WS1  &kp WS2 &kp WS3  &kp WS4 &kp WS5          &kp WS6 &kp WS7 &kp WS8 &kp WS9 &kp WS0  &none
-    &none     &kp WS1  &kp WS2 &kp WS3  &kp WS4 &kp WS5          &kp WSL &kp WSD &kp WSU &kp WSR &none    &none
-    &none     &none    &none   &none    &none   &none            &none   &none   &none   &none   &none    &none
-	  &none    &none &kp LGUI   &none &kp L_CYCLE                   &kp W_SWAP  &none  &none  &none  &none &none
+    &none &none   &none   &none    &none   &none            &none   &none   &none   &none   &none   &none
+    &none &kp WS1 &kp WS2 &kp WS3  &kp WS4 &kp WS5          &kp WS6 &kp WS7 &kp WS8 &kp WS9 &kp WS0 &none
+    &none &kp WS1 &kp WS2 &kp WS3  &kp WS4 &kp WS5          &kp WSL &kp WSD &kp WSU &kp WSR &none   &none
+    &none &none   &none   &none    &none   &none            &none   &none   &none   &none   &none   &none
+	  &none &none &kp LGUI &none &kp L_CYCLE                   &kp W_SWAP &none &none &none &none &none
 	    >;
 	};
 
@@ -172,8 +173,19 @@ ZMK_HOLD_TAP(hmr,
     &bt BT_CLR  &bt BT_CLR_ALL &none &none &none  &none            &none &none &none &none &none      &none
     &bt BT_PRV  &bt BT_NXT     &none &none &none  &none            &none &none &none &none &none      &none
     &bt BT_DISC &none          &none &none &none  &none            &none &none &none &none &none      &none
-	  &none  &none  &none &none &none		 &none &none  &none  &none  &none &none
+	  &none  &none  &none &none &none		 &none &none &none &none &none &none
+	    >;
+	};
+
+        bracket_layer {
+	    bindings = <
+    &none &none  &none L_CHEV   R_CHEV   &none       &none &kp F10  &kp F11 &kp F12 &none &none
+    &none &none  &none &kp LPAR &kp RPAR &kp EXCL    &none &kp F7   &kp F8  &kp F9  &none &none
+    &none &none  &none L_CL_BKT R_CL_BKT &kp EQUAL   &none &kp F4   &kp F5  &kp F6  &none &none
+    &none &none  &none L_SQ_BKT R_SQ_BKT _PIPE       &none &kp F1   &kp F2  &kp F3  &none &none
+	  &none &none &none &none &none	                 &none &none &none &none &none &none
 	    >;
 	};
     };
 };
+L_CHEV      L_SQ_BKT   L_CL_BKT  &kp LPAR
