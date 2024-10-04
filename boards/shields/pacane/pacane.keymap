@@ -163,17 +163,17 @@ ZMK_HOLD_TAP(hmr,
     &none &kp WS1 &kp WS2 &kp WS3  &kp WS4 &kp WS5          &kp WS6 &kp WS7 &kp WS8 &kp WS9 &kp WS0 &none
     &none &kp WS1 &kp WS2 &kp WS3  &kp WS4 &kp WS5          &kp WSL &kp WSD &kp WSU &kp WSR &none   &none
     &none &none   &none   &none    &none   &none            &none   &none   &none   &none   &none   &none
-	  &none &none &kp LGUI &none &kp L_CYCLE                   &kp W_SWAP &none &none &none &none &none
+	  &none &none &kp LGUI &none &kp L_CYCLE               &kp W_SWAP &none &none &none &none &none
 	    >;
 	};
 
 	kb_layer {
 	    bindings = <
-    &bootloader &sys_reset     &none &none &none  &none            &none &none &none &none &sys_reset &bootloader  
-    &bt BT_CLR  &bt BT_CLR_ALL &none &none &none  &none            &none &none &none &none &none      &none
-    &bt BT_PRV  &bt BT_NXT     &none &none &none  &none            &none &none &none &none &none      &none
-    &bt BT_DISC &none          &none &none &none  &none            &none &none &none &none &none      &none
-	  &none  &none  &none &none &none		 &none &none &none &none &none &none
+    &bootloader &sys_reset     &none &none &none  &none    &none &none &none &none &sys_reset &bootloader  
+    &bt BT_CLR  &bt BT_CLR_ALL &none &none &none  &none    &none &none &none &none &none      &none
+    &bt BT_PRV  &bt BT_NXT     &none &none &none  &none    &none &none &none &none &none      &none
+    &bt BT_DISC &none          &none &none &none  &none    &none &none &none &none &none      &none
+	  &none  &none  &none &none &none		      &none &none &none &none &none &none
 	    >;
 	};
 
@@ -183,9 +183,8 @@ ZMK_HOLD_TAP(hmr,
     &none &none  &none &kp LPAR &kp RPAR &kp EXCL    &none &kp F7   &kp F8  &kp F9  &none &none
     &none &none  &none L_CL_BKT R_CL_BKT &kp EQUAL   &none &kp F4   &kp F5  &kp F6  &none &none
     &none &none  &none L_SQ_BKT R_SQ_BKT _PIPE       &none &kp F1   &kp F2  &kp F3  &none &none
-	  &none &none &none &none &none	                 &none &none &none &none &none &none
+	      &none &none &none &none &none	         &none &none &none &none &none &none
 	    >;
 	};
     };
 };
-L_CHEV      L_SQ_BKT   L_CL_BKT  &kp LPAR
