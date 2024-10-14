@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include "zmk-helpers/helper.h"
+#include <dt-bindings/zmk/mouse.h>
 
 #define default_layer 0
 #define lower_layer 1
@@ -13,6 +14,7 @@
 #define win_layer 7
 #define kb_layer 8
 #define brackets_layer 9
+#define qwerty_layer 10
 
 #define L_SQ_BKT &kp RA(LBKT)
 #define R_SQ_BKT &kp RA(RBKT)
@@ -99,10 +101,10 @@ ZMK_HOLD_TAP(hmr,
 
 	lower_layer {
 	    bindings = <
-    &none &none &none	 &none	   &none     &none	&none    &none    &none    &none     &none  &none
-    &none &none &none	 &kp UP    &none     &none	&none    &none    &none    &none     &none  &none
-    &mo 7 &none &kp LEFT &kp DOWN  &kp RIGHT &none	&kp LEFT &kp DOWN &kp UP   &kp RIGHT &none  &none
-    &none &none &none    &none     &none     &none	&none    &none    &none    &none     &none  &none
+    &none &none &none	 &none	   &none     &none	&kp K_UNDO &kp K_PASTE &kp K_COPY &kp K_CUT &none  &none
+    &none &none &none	 &kp UP    &none     &none	&none      &none       &none      &none     &none  &none
+    &mo 7 &none &kp LEFT &kp DOWN  &kp RIGHT &none	&kp LEFT   &kp DOWN    &kp UP     &kp RIGHT &none  &none
+    &none &none &none    &none     &none     &none	&kp HOME   &kp PG_DN &kp PG_UP    &kp END   &none  &none
 		 &none  &none  &none &none &none		&kp DEL &kp LA(RET) &kp BSPC &none &mo 8
 	    >;
 	};
@@ -113,7 +115,7 @@ ZMK_HOLD_TAP(hmr,
     &kp GRAVE &kp EXCL &kp AT    &kp HASH  &kp DLLR &kp PRCNT     &kp CARET       &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp EQUAL
     &none     _PIPE    L_CHEV    L_SQ_BKT  L_CL_BKT &kp LPAR      &kp RPAR        R_CL_BKT R_SQ_BKT R_CHEV   &kp HOME &kp PG_UP
     _AT       UNDSCR   &kp EQUAL &kp MINUS _PLUS    MULTPL	  &kp PAUSE_BREAK &kp F12  &kp INS  &kp DEL  &kp END  &kp PG_DN
-		 &none  &none  &none &kp SPACE &none		          &none      &none      &none     &none      &none
+		 &none  &none  &none &kp SPACE &none			  &none      &none      &none     &none      &none
 	    >;
 	};
 
@@ -169,21 +171,31 @@ ZMK_HOLD_TAP(hmr,
 
 	kb_layer {
 	    bindings = <
-    &bootloader &sys_reset     &none &none &none  &none    &none &none &none &none &sys_reset &bootloader  
-    &bt BT_CLR  &bt BT_CLR_ALL &none &none &none  &none    &none &none &none &none &none      &none
-    &bt BT_PRV  &bt BT_NXT     &none &none &none  &none    &none &none &none &none &none      &none
-    &bt BT_DISC &none          &none &none &none  &none    &none &none &none &none &none      &none
+    &bootloader &sys_reset     &none &none &none  &to 0     &none &none &none &none &sys_reset &bootloader
+    &bt BT_CLR  &bt BT_CLR_ALL &none &none &none  &to 10    &none &none &none &none &none      &none
+    &bt BT_PRV  &bt BT_NXT     &none &none &none  &none     &none &none &none &none &none      &none
+    &bt BT_DISC &none          &none &none &none  &none     &none &none &none &none &none      &none
 	  &none  &none  &none &none &none		      &none &none &none &none &none &none
 	    >;
 	};
 
-        brackets_layer {
+	brackets_layer {
 	    bindings = <
     &none &none  &none L_CHEV   R_CHEV   &none       &none &none &none &none &none &none
     &none &none  &none &kp LPAR &kp RPAR &kp EXCL    &none &none &none &none &none &none
     &none &none  &none L_CL_BKT R_CL_BKT &kp EQUAL   &none &none &none &none &none &none
     &none &none  &none L_SQ_BKT R_SQ_BKT _PIPE       &none &none &none &none &none &none
-	      &none &none &none &none &none	         &none &none &none &none &none &none
+	      &none &none &none &none &none		 &none &none &none &none &none &none
+	    >;
+	};
+
+	qwerty_layer {
+	    bindings = <
+    &kp ESC	  &kp N1       &kp N2	   &kp N3      &kp N4       &kp N5	&kp N6  &kp N7       &kp N8       &kp N9      &kp N0          &kp N4
+    &kp TAB	  &kp Q	       &kp W	   &kp E       &kp R        &kp T	&kp Y   &kp U        &kp I        &kp O       &kp P           &kp N5
+    &kp LSHIFT	  &hml LCTRL A &hml RALT S &hml LGUI D &hml LSHFT F &lt 5 G	&lt 5 H &hmr LSHFT J &hmr LGUI K  &hmr LALT L &hmr LCTRL SCLN &kp SQT
+    &mt LCTRL TAB &kp Z	       &kp X	   &kp C       &kp V        &kp B	&kp N   &kp M        &lt 9 COMMA  &kp DOT     &kp FSLH        &kp ESC
+		   &kp LGUI  &mo 6 &lt 1 ESC &lt 1 SPACE &lt 4 RET                      &lt 3 DEL &lt 2 RET &lt 2 BSPC &mo 6  &kp RALT
 	    >;
 	};
     };
