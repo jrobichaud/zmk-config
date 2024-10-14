@@ -11,7 +11,7 @@
 #define R_CL_BKT &kp RA(BSLH)
 
 #define L_CHEV &kp BSLH
-#define R_CHEV &kp GT
+#define R_CHEV &kp LS(BSLH)
 
 #define _PLUS &kp LS(EQUAL)
 #define _PIPE &kp LS(GRAVE)
