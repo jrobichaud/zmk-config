@@ -84,6 +84,27 @@ ZMK_HOLD_TAP(hmr,
                 , <&macro_tap &kp C>
                 ;
         };
+
+        passwd: passwd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp M>
+                , <&macro_tap &kp O>
+                , <&macro_tap &kp T>
+                , <&macro_tap &kp D>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp P>
+                , <&macro_tap &kp A>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp 1>
+                , <&macro_tap &kp 2>
+                , <&macro_tap &kp 3>
+                , <&macro_tap &kp 4>
+                ;
+        };
     };
 };
 
@@ -130,7 +151,7 @@ ZMK_HOLD_TAP(hmr,
     &kp GRAVE &kp EXCL &kp AT    &kp HASH  &kp DLLR &kp PRCNT     &kp CARET       &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp EQUAL
     &none     _PIPE    L_CHEV    L_SQ_BKT  L_CL_BKT &kp LPAR      &kp RPAR        R_CL_BKT R_SQ_BKT R_CHEV   &kp HOME &kp PG_UP
     _AT       UNDSCR   &kp EQUAL &kp MINUS _PLUS    MULTPL	  &kp PAUSE_BREAK &kp F12  &kp INS  &kp DEL  &kp END  &kp PG_DN
-		 &none  &none  &none &kp SPACE &none			  &none      &none      &none     &none      &none
+		 &passwd &none  &none &kp SPACE &none			  &none      &none      &none     &none      &none
 	    >;
 	};
 
