@@ -73,6 +73,20 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-on-release;             // delay positional check until key-release
 )
 
+
+/ {
+    macros {
+        cced: cced {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp RBKT>
+                , <&macro_tap &kp C>
+                ;
+        };
+    };
+};
+
 #define default_layer 0
 #define lower_layer 1
 #define raise_layer 2
@@ -145,7 +159,7 @@ ZMK_HOLD_TAP(hmr,
     &none &none    &none &none    &none &none            &none &none &none &none &none    &none
     &none &none    &none &none    &none &none            &none &none &none &none &none    &none
     &none &kp LBKT &none &none    &none &none            &none &none &none TREMA &kp LBRC &none
-    &none &none    &none &kp RBKT &none &none            &none &none &none &none &none    &none
+    &none &none    &none &cced    &none &none            &none &none &none &none &none    &none
 	  &none    &none &none    &none &none		     &none &none  &none  &none  &none &none
 	    >;
 	};
