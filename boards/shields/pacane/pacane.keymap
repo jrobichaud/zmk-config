@@ -119,6 +119,7 @@ ZMK_HOLD_TAP(hmr,
 #define kb_layer 8
 #define brackets_layer 9
 #define qwerty_layer 10
+#define gaming_layer 11
 
 / {
     keymap {
@@ -141,6 +142,16 @@ ZMK_HOLD_TAP(hmr,
     &kp TAB	  &kp Q	       &kp W	   &kp E       &kp R        &kp T	&kp Y   &kp U        &kp I        &kp O       &kp P           &kp N5
     &kp LSHIFT	  &hml LCTRL A &hml RALT S &hml LGUI D &hml LSHFT F &lt 5 G	&lt 5 H &hmr LSHFT J &hmr LGUI K  &hmr LALT L &hmr LCTRL SCLN &kp SQT
     &mt LCTRL TAB &kp Z	       &kp X	   &kp C       &kp V        &kp B	&kp N   &kp M        &lt 9 COMMA  &kp DOT     &kp FSLH        &kp ESC
+		   &kp LGUI  &mo 6 &lt 1 ESC &lt 1 SPACE &lt 4 RET                      &lt 3 DEL &lt 2 RET &lt 2 BSPC &mo 6  &kp RALT
+	    >;
+	};
+
+	gaming_layer {
+	    bindings = <
+    &kp ESC	  &kp N1       &kp N2	   &kp N3      &kp N4       &kp N5	&kp N6  &kp N7       &kp N8       &kp N9      &kp N0          &kp N4
+    &kp TAB	  &kp Q	       &kp W	   &kp E       &kp R        &kp T	&kp Y   &kp U        &kp I        &kp O       &kp P           &kp N5
+    &kp LSHIFT	  &kp A        &kp S	   &kp D       &kp F	    &lt 5 G	&lt 5 H &kp J	     &kp K	  &kp L	      &kp SCLN	      &kp SQT
+    &kp LCTRL 	  &kp Z	       &kp X	   &kp C       &kp V        &kp B	&kp N   &kp M        &lt 9 COMMA  &kp DOT     &kp FSLH        &kp ESC
 		   &kp LGUI  &mo 6 &lt 1 ESC &lt 1 SPACE &lt 4 RET                      &lt 3 DEL &lt 2 RET &lt 2 BSPC &mo 6  &kp RALT
 	    >;
 	};
@@ -230,7 +241,7 @@ ZMK_HOLD_TAP(hmr,
 	    bindings = <
     &bootloader &sys_reset     &none &none &none  &to 0     &none &none &none &none &sys_reset &bootloader
     &bt BT_CLR  &bt BT_CLR_ALL &none &none &none  &to 10    &none &none &none &none &none      &none
-    &bt BT_PRV  &bt BT_NXT     &none &none &none  &none     &none &none &none &none &none      &none
+    &bt BT_PRV  &bt BT_NXT     &none &none &none  &to 11    &none &none &none &none &none      &none
     &bt BT_DISC &none          &none &none &none  &none     &none &none &none &none &none      &none
 	  &none  &none  &none &none &none		      &none &none &none &none &none &none
 	    >;
