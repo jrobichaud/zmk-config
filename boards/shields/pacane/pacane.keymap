@@ -108,18 +108,31 @@ ZMK_HOLD_TAP(hmr,
     };
 };
 
-#define default_layer 0
-#define lower_layer 1
-#define raise_layer 2
-#define num_layer 3
-#define fun_layer 4
-#define fr_layer 5
-#define media_layer 6
-#define win_layer 7
-#define kb_layer 8
-#define brackets_layer 9
-#define qwerty_layer 10
-#define gaming_layer 11
+// #define default_layer 0
+// #define lower_layer 1
+// #define raise_layer 2
+// #define num_layer 3
+// #define fun_layer 4
+// #define fr_layer 5
+// #define media_layer 6
+// #define win_layer 7
+// #define kb_layer 8
+// #define brackets_layer 9
+// #define qwerty_layer 10
+// #define gaming_layer 11
+
+#define COL 0
+#define QWE 1
+#define GAM 3
+#define LOW 4
+#define RAI 5
+#define NUM 6
+#define FUN 7
+#define FRE 8
+#define MED 9
+#define WIN 10
+#define BKT 11
+#define KBM 12
 
 / {
     keymap {
@@ -130,9 +143,9 @@ ZMK_HOLD_TAP(hmr,
 	    bindings = <
     &kp ESC	  &kp N1       &kp N2	   &kp N3      &kp N4       &kp N5	&kp N6  &kp N7       &kp N8       &kp N9      &kp N0       &kp N4
     &kp TAB	  &kp Q	       &kp W	   &kp F       &kp P        &kp B	&kp J   &kp L        &kp U        &kp Y       &kp SCLN     &kp N5
-    &kp LSHIFT	  &hml LCTRL A &hml RALT R &hml LGUI S &hml LSHFT T &lt 5 G	&lt 5 M &hmr LSHFT N &hmr LGUI E  &hmr LALT I &hmr LCTRL O &kp SQT
-    &mt LCTRL TAB &kp Z	       &kp X	   &kp C       &kp D        &kp V	&kp K   &kp H        &lt 9 COMMA  &kp DOT     &kp FSLH     &kp ESC
-		   &kp LGUI  &mo 6 &lt 1 ESC &lt 1 SPACE &lt 4 RET                      &lt 3 DEL &lt 2 RET &lt 2 BSPC &mo 6  &kp RALT
+    &kp LSHIFT	  &hml LCTRL A &hml RALT R &hml LGUI S &hml LSHFT T &lt FRE G	&lt FRE M &hmr LSHFT N &hmr LGUI E  &hmr LALT I &hmr LCTRL O &kp SQT
+    &mt LCTRL TAB &kp Z	       &kp X	   &kp C       &kp D        &kp V	&kp K   &kp H        &lt BKT  COMMA  &kp DOT     &kp FSLH     &kp ESC
+		   &kp LGUI  &mo MED  &lt LOW  ESC &lt LOW  SPACE &lt FUN  RET                      &lt NUM  DEL &lt RAI  RET &lt RAI  BSPC &mo MED   &kp RALT
 	    >;
 	};
 	
@@ -140,9 +153,9 @@ ZMK_HOLD_TAP(hmr,
 	    bindings = <
     &kp ESC	  &kp N1       &kp N2	   &kp N3      &kp N4       &kp N5	&kp N6  &kp N7       &kp N8       &kp N9      &kp N0          &kp N4
     &kp TAB	  &kp Q	       &kp W	   &kp E       &kp R        &kp T	&kp Y   &kp U        &kp I        &kp O       &kp P           &kp N5
-    &kp LSHIFT	  &hml LCTRL A &hml RALT S &hml LGUI D &hml LSHFT F &lt 5 G	&lt 5 H &hmr LSHFT J &hmr LGUI K  &hmr LALT L &hmr LCTRL SCLN &kp SQT
-    &mt LCTRL TAB &kp Z	       &kp X	   &kp C       &kp V        &kp B	&kp N   &kp M        &lt 9 COMMA  &kp DOT     &kp FSLH        &kp ESC
-		   &kp LGUI  &mo 6 &lt 1 ESC &lt 1 SPACE &lt 4 RET                      &lt 3 DEL &lt 2 RET &lt 2 BSPC &mo 6  &kp RALT
+    &kp LSHIFT	  &hml LCTRL A &hml RALT S &hml LGUI D &hml LSHFT F &lt FRE G	&lt FRE H &hmr LSHFT J &hmr LGUI K  &hmr LALT L &hmr LCTRL SCLN &kp SQT
+    &mt LCTRL TAB &kp Z	       &kp X	   &kp C       &kp V        &kp B	&kp N   &kp M        &lt BKT  COMMA  &kp DOT     &kp FSLH        &kp ESC
+		   &kp LGUI  &mo MED  &lt LOW  ESC &lt LOW  SPACE &lt FUN  RET                      &lt NUM  DEL &lt RAI  RET &lt RAI  BSPC &mo MED   &kp RALT
 	    >;
 	};
 
@@ -150,9 +163,9 @@ ZMK_HOLD_TAP(hmr,
 	    bindings = <
     &kp ESC	  &kp N1       &kp N2	   &kp N3      &kp N4       &kp N5	&kp N6  &kp N7       &kp N8       &kp N9      &kp N0          &kp N4
     &kp TAB	  &kp Q	       &kp W	   &kp E       &kp R        &kp T	&kp Y   &kp U        &kp I        &kp O       &kp P           &kp N5
-    &kp LSHIFT	  &kp A        &kp S	   &kp D       &kp F	    &lt 5 G	&lt 5 H &kp J	     &kp K	  &kp L	      &kp SCLN	      &kp SQT
-    &kp LCTRL 	  &kp Z	       &kp X	   &kp C       &kp V        &kp B	&kp N   &kp M        &lt 9 COMMA  &kp DOT     &kp FSLH        &kp ESC
-		   &kp LGUI  &mo 6 &lt 1 ESC &lt 1 SPACE &lt 4 RET                      &lt 3 DEL &lt 2 RET &lt 2 BSPC &mo 6  &kp RALT
+    &kp LSHIFT	  &kp A        &kp S	   &kp D       &kp F	    &lt FRE G	&lt FRE H &kp J	     &kp K	  &kp L	      &kp SCLN	      &kp SQT
+    &kp LCTRL 	  &kp Z	       &kp X	   &kp C       &kp V        &kp B	&kp N   &kp M        &lt BKT  COMMA  &kp DOT     &kp FSLH        &kp ESC
+		   &kp LGUI  &mo MED  &lt LOW  ESC &lt LOW  SPACE &lt FUN  RET                      &lt NUM  DEL &lt RAI  RET &lt RAI  BSPC &mo MED   &kp RALT
 	    >;
 	};
 
@@ -160,9 +173,9 @@ ZMK_HOLD_TAP(hmr,
 	    bindings = <
     &none &none &none	 &none	   &none     &none	&none     &none     &none     &none     &none &none
     &none &none &none	 &kp UP    &none     &none	&kp LG(Z) &kp LG(V) &kp LG(C) &kp LG(X) &none &none
-    &mo 7 &none &kp LEFT &kp DOWN  &kp RIGHT &none	&kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none &none
+    &mo WIN  &none &kp LEFT &kp DOWN  &kp RIGHT &none	&kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none &none
     &none &none &none    &none     &none     &none	&kp HOME  &kp PG_DN &kp PG_UP &kp END   &none &none
-		 &none  &none  &none &none &none		&kp DEL &kp LA(RET) &kp BSPC &mo 8 &mo 8
+		 &none  &none  &none &none &none		&kp DEL &kp LA(RET) &kp BSPC &mo KBM  &mo KBM 
 	    >;
 	};
 
@@ -172,7 +185,7 @@ ZMK_HOLD_TAP(hmr,
     &kp GRAVE &kp EXCL &kp AT    &kp HASH  &kp DLLR &kp PRCNT     &kp CARET       &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp EQUAL
     &none     _PIPE    L_CHEV    L_SQ_BKT  L_CL_BKT &kp LPAR      &kp RPAR        R_CL_BKT R_SQ_BKT R_CHEV   &kp HOME &kp PG_UP
     _AT       UNDSCR   &kp EQUAL &kp MINUS _PLUS    MULTPL	  &kp PAUSE_BREAK &kp F12  &kp INS  &kp DEL  &kp END  &kp PG_DN
-		 &passwd &none  &none &kp SPACE &none			  &none      &none      &none     &none      &mo 8
+		 &passwd &none  &none &kp SPACE &none			  &none      &none      &none     &none      &mo KBM 
 	    >;
 	};
 
@@ -212,7 +225,7 @@ ZMK_HOLD_TAP(hmr,
     &none     &none &none &none &none &kp C_PREV       &none &none &none &none &none &none
     &kp LSHFT &none &none &none &none &kp C_PP         &none &none &none &none &none &none
     &none     &none &none &none &none &kp C_FF         &none &none &none &none &none &none
-	  &none    &none &none    &none &none		     &none &none  &none  &none  &none &to 10
+	  &none    &none &none    &none &none		     &none &none  &none  &none  &none &none
 	    >;
 	};
 	
