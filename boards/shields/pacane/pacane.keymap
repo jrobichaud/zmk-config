@@ -85,26 +85,6 @@ ZMK_HOLD_TAP(hmr,
                 ;
         };
 
-        email: email {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp J>
-                , <&macro_tap &kp O>
-                , <&macro_tap &kp E>
-                , <&macro_tap &kp L>
-                , <&macro_tap &kp E>
-                , <&macro_tap &kp P>
-                , <&macro_tap &kp A>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp E>
-                , <&macro_tap &kp N1>
-                , <&macro_tap &kp N2>
-                , <&macro_tap &kp N3>
-                , <&macro_tap &kp N4>
-                ;
-        };
         passwd: passwd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -151,6 +131,16 @@ ZMK_HOLD_TAP(hmr,
     &kp TAB	  &kp Q	       &kp W	   &kp F       &kp P        &kp B	&kp J   &kp L        &kp U        &kp Y       &kp SCLN     &kp N5
     &kp LSHIFT	  &hml LCTRL A &hml RALT R &hml LGUI S &hml LSHFT T &lt 5 G	&lt 5 M &hmr LSHFT N &hmr LGUI E  &hmr LALT I &hmr LCTRL O &kp SQT
     &mt LCTRL TAB &kp Z	       &kp X	   &kp C       &kp D        &kp V	&kp K   &kp H        &lt 9 COMMA  &kp DOT     &kp FSLH     &kp ESC
+		   &kp LGUI  &mo 6 &lt 1 ESC &lt 1 SPACE &lt 4 RET                      &lt 3 DEL &lt 2 RET &lt 2 BSPC &mo 6  &kp RALT
+	    >;
+	};
+	
+	qwerty_layer {
+	    bindings = <
+    &kp ESC	  &kp N1       &kp N2	   &kp N3      &kp N4       &kp N5	&kp N6  &kp N7       &kp N8       &kp N9      &kp N0          &kp N4
+    &kp TAB	  &kp Q	       &kp W	   &kp E       &kp R        &kp T	&kp Y   &kp U        &kp I        &kp O       &kp P           &kp N5
+    &kp LSHIFT	  &hml LCTRL A &hml RALT S &hml LGUI D &hml LSHFT F &lt 5 G	&lt 5 H &hmr LSHFT J &hmr LGUI K  &hmr LALT L &hmr LCTRL SCLN &kp SQT
+    &mt LCTRL TAB &kp Z	       &kp X	   &kp C       &kp V        &kp B	&kp N   &kp M        &lt 9 COMMA  &kp DOT     &kp FSLH        &kp ESC
 		   &kp LGUI  &mo 6 &lt 1 ESC &lt 1 SPACE &lt 4 RET                      &lt 3 DEL &lt 2 RET &lt 2 BSPC &mo 6  &kp RALT
 	    >;
 	};
@@ -214,6 +204,17 @@ ZMK_HOLD_TAP(hmr,
 	  &none    &none &none    &none &none		     &none &none  &none  &none  &none &to 10
 	    >;
 	};
+	
+	brackets_layer {
+	    bindings = <
+    &none &none  &none L_CHEV   R_CHEV   &none       &none &none &none &none &none &none
+    &none &none  &none &kp LPAR &kp RPAR &kp EXCL    &none &none &none &none &none &none
+    &none &none  &none L_CL_BKT R_CL_BKT &kp EQUAL   &none &none &none &none &none &none
+    &none &none  &none L_SQ_BKT R_SQ_BKT _PIPE       &none &none &none &none &none &none
+	      &none &none &none &none &none		 &none &none &none &none &none &none
+	    >;
+	};
+
 
 	win_layer {
 	    bindings = <
@@ -232,26 +233,6 @@ ZMK_HOLD_TAP(hmr,
     &bt BT_PRV  &bt BT_NXT     &none &none &none  &none     &none &none &none &none &none      &none
     &bt BT_DISC &none          &none &none &none  &none     &none &none &none &none &none      &none
 	  &none  &none  &none &none &none		      &none &none &none &none &none &none
-	    >;
-	};
-
-	brackets_layer {
-	    bindings = <
-    &none &none  &none L_CHEV   R_CHEV   &none       &none &none &none &none &none &none
-    &none &none  &none &kp LPAR &kp RPAR &kp EXCL    &none &none &none &none &none &none
-    &none &none  &none L_CL_BKT R_CL_BKT &kp EQUAL   &none &none &none &none &none &none
-    &none &none  &none L_SQ_BKT R_SQ_BKT _PIPE       &none &none &none &none &none &none
-	      &none &none &none &none &none		 &none &none &none &none &none &none
-	    >;
-	};
-
-	qwerty_layer {
-	    bindings = <
-    &kp ESC	  &kp N1       &kp N2	   &kp N3      &kp N4       &kp N5	&kp N6  &kp N7       &kp N8       &kp N9      &kp N0          &kp N4
-    &kp TAB	  &kp Q	       &kp W	   &kp E       &kp R        &kp T	&kp Y   &kp U        &kp I        &kp O       &kp P           &kp N5
-    &kp LSHIFT	  &hml LCTRL A &hml RALT S &hml LGUI D &hml LSHFT F &lt 5 G	&lt 5 H &hmr LSHFT J &hmr LGUI K  &hmr LALT L &hmr LCTRL SCLN &kp SQT
-    &mt LCTRL TAB &kp Z	       &kp X	   &kp C       &kp V        &kp B	&kp N   &kp M        &lt 9 COMMA  &kp DOT     &kp FSLH        &kp ESC
-		   &kp LGUI  &mo 6 &lt 1 ESC &lt 1 SPACE &lt 4 RET                      &lt 3 DEL &lt 2 RET &lt 2 BSPC &mo 6  &kp RALT
 	    >;
 	};
     };
