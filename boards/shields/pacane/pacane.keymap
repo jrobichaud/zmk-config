@@ -123,16 +123,16 @@ ZMK_HOLD_TAP(hmr,
 
 #define COL 0
 #define QWE 1
-#define GAM 3
-#define LOW 4
-#define RAI 5
-#define NUM 6
-#define FUN 7
-#define FRE 8
-#define MED 9
-#define WIN 10
-#define BKT 11
-#define KBM 12
+#define GAM 2
+#define LOW 3
+#define RAI 4
+#define NUM 5
+#define FUN 6
+#define FRE 7
+#define MED 8
+#define WIN 9
+#define BKT 10
+#define KBM 11
 
 / {
     keymap {
@@ -229,6 +229,16 @@ ZMK_HOLD_TAP(hmr,
 	    >;
 	};
 	
+	win_layer {
+	    bindings = <
+    &none &none   &none   &none    &none   &none            &none   &none   &none   &none   &none   &none
+    &none &kp WS1 &kp WS2 &kp WS3  &kp WS4 &kp WS5          &kp WS6 &kp WS7 &kp WS8 &kp WS9 &kp WS0 &none
+    &none &kp WS1 &kp WS2 &kp WS3  &kp WS4 &kp WS5          &kp WSL &kp WSD &kp WSU &kp WSR &none   &none
+    &none &none   &none   &none    &none   &none            &none   &none   &none   &none   &none   &none
+	  &none &none &kp LGUI &none &kp L_CYCLE               &kp W_SWAP &none &none &none &none 
+	    >;
+	};
+
 	brackets_layer {
 	    bindings = <
     &none &none  &none L_CHEV   R_CHEV   &none       &none &none &none &none &none &none
@@ -239,16 +249,6 @@ ZMK_HOLD_TAP(hmr,
 	    >;
 	};
 
-
-	win_layer {
-	    bindings = <
-    &none &none   &none   &none    &none   &none            &none   &none   &none   &none   &none   &none
-    &none &kp WS1 &kp WS2 &kp WS3  &kp WS4 &kp WS5          &kp WS6 &kp WS7 &kp WS8 &kp WS9 &kp WS0 &none
-    &none &kp WS1 &kp WS2 &kp WS3  &kp WS4 &kp WS5          &kp WSL &kp WSD &kp WSU &kp WSR &none   &none
-    &none &none   &none   &none    &none   &none            &none   &none   &none   &none   &none   &none
-	  &none &none &kp LGUI &none &kp L_CYCLE               &kp W_SWAP &none &none &none &none 
-	    >;
-	};
 
 	kb_layer {
 	    bindings = <
