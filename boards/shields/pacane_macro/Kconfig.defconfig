@@ -1,0 +1,5 @@
+if SHIELD_PACANE_MACRO
+
+config ZMK_KEYBOARD_NAME
+    default "Pacane Macro"
+endif
