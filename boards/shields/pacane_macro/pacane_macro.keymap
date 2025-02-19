@@ -1,4 +1,6 @@
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+
 
 / {
     keymap {
@@ -8,6 +10,7 @@
             bindings = <
                 &kp Z  &kp M  &kp K  &kp A
                 &kp A  &kp B  &kp C  &kp B 
+                &kp D  &kp E  &kp F  &kp C
                 &kp D  &kp E  &kp F  &kp C
             >;
         };
