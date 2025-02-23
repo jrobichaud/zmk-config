@@ -21,7 +21,7 @@
 
 	bluetooth_layer {
             bindings = <
-	    	&bt BT_CLR_ALL &bt BT_NXT    &bt BT_PRV    &bt BT_DISC 
+	    	&bt BT_CLR_ALL &bt BT_NXT    &bt BT_PRV    &bt BT_CLR 
                 &bt BT_SEL 7   &bt BT_SEL 8  &bt BT_SEL 9  &none
                 &bt BT_SEL 4   &bt BT_SEL 5  &bt BT_SEL 6  &none
                 &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &none
