@@ -30,3 +30,10 @@ config BT_MAX_PAIRED
     default 6
 
 endif
+
+if SHIELD_PACANE_MACRO || SHIELD_PACANE_MACRO_DONGLE
+
+config ZMK_BLE_EXPERIMENTAL_CONN
+    default y
+
+endif
